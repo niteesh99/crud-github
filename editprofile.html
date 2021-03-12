@@ -1,0 +1,51 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+   <div class="header">
+    <i class="fa fa-github" style="font-size:70px;color:rgb(116, 112, 112);position:relative; left:120px; top:2px;"></i>
+        </div>
+      <div class="top"> 
+    <h3 style="text-align: center;">Update to GitHub</h3>
+    </div>
+    </div>
+    <div class="main">
+    <label>username</label><br>
+    <input type="text" id="name1" required/><br><br>
+    <label>email address</label><br>
+    <input type="text" id="email" required/><br><br>
+    <label>password</label><br>
+    <input type="password" id="password" required/><br><br>
+    <button type="button" class="btn btn-success" onclick="show()">Update Profile</button>
+    </div>
+</body>
+<script>
+      document.getElementById("name1").value= localStorage.getItem("name");
+  document.getElementById("email").value=localStorage.getItem("email");
+  document.getElementById("password").value=localStorage.getItem("password");
+
+    function show() 
+    {
+        
+  var name=document.getElementById("name1").value;
+  var email=document.getElementById("email").value;
+  var password=document.getElementById("password").value;
+        localStorage.setItem("name",name);
+      localStorage.setItem("email",email);
+  localStorage.setItem("password",password);
+        alert("updated successfully");
+        location.replace("github.html");
+    }
+
+</script>
+</html>

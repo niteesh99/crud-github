@@ -1,0 +1,46 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style1.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        margin: 50 auto;
+        width:10%;   
+        background-color: lightblue;
+    }
+    #button1{
+        position: absolute;
+        right:70%;
+        top: 7%;
+    }
+</style>
+<body>
+    <button type="button" class="btn btn-success" onclick="del()">Delete</button>
+    <button type="button" class="btn btn-success" id="button1" onclick="send()">Update Profile</button>
+   
+</body>
+<script>
+ function del()
+ {
+    localStorage.removeItem("name");
+    localStorage.removeItem("email");
+    localStorage.removeItem("password");
+    alert("successfully deleted");
+    location.replace("github.html");
+
+ }
+ function send()
+ {
+    location.replace("editprofile.html");
+ }
+</script>
+</html>

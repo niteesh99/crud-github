@@ -1,0 +1,44 @@
+body{
+    margin: 140 auto;
+    width: 300px;   
+
+}
+.header{
+    padding-bottom:20px ;
+}
+.main{
+    background-color:#f5f5f5;
+    border: 1px solid gainsboro;
+    width:300px;
+    border-radius: 5px;
+    padding: 30px 25px 25px 25px;
+    margin-bottom: 15px;
+   
+
+}
+input[type=text],input[type=password]
+{
+    width:250px;
+    border-radius: 5px;
+    padding: 3px;
+    border: 3px solid #CCC;
+
+}
+.btn{
+  width:250px;
+background-color:#4CAF50;
+}
+#right{
+    float: right;
+}
+.top{
+    padding-bottom: 10px;
+}
+.footer{
+    background-color:white;
+    border: 1px solid gainsboro;
+    width:300px;
+    padding: 6px;   
+    text-align: center;
+    border-radius: 4px;
+     }

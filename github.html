@@ -1,0 +1,47 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+   <div class="header">
+    <i class="fa fa-github" style="font-size:70px;color:rgb(116, 112, 112);position:relative; left:120px; top:2px;"></i>
+        </div>
+      <div class="top"> 
+    <h3 style="text-align: center;">Sign in to GitHub</h3>
+    </div>
+    </div>
+    <div class="main">
+    <label>username or email address</label><br>
+    <input type="text" id="name"><br><br>
+    <label>password</label><span id="right"><a href="#1234" >Forgot password?</a></span><br>
+    <input type="password" id="password"><br><br>
+    <button type="button" class="btn btn-success" onclick="disp()">Sign in</button>
+    </div>
+    <div class="footer">
+    <p>New to GitHub?<span><a href="github1.html" >Create an account.</a></span></p>
+   </div>
+  </body>
+<script>
+    function disp(){
+     var name=document.getElementById("name").value;
+     var password=document.getElementById("password").value;
+     if((name===localStorage.getItem("name")||name===localStorage.getItem("email"))&&password===localStorage.getItem("password"))
+     {
+        alert(" login successfull");
+        location.replace("dashbord.html");
+     }
+     else{
+         alert('invalid data');
+     }
+    }
+</script>
+</html>
